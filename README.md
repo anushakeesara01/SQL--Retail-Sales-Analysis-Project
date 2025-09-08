@@ -50,7 +50,7 @@ CREATE TABLE Retail_sales
 **Null Value Check**: Checked for any null values in the dataset and delete records with missing data.
 
  ***sql
-  SELECT * FROM projects.retail_sales
+ SELECT * FROM projects.retail_sales
  WHERE transactions_id IS NULL
  OR
  sale_date IS NULL
@@ -68,7 +68,7 @@ CREATE TABLE Retail_sales
  select count(distinct(customer_id)) from retail_sales;
  select distinct(category) from retail_sales;
  
-  DELETE FROM retail_sales
+ DELETE FROM retail_sales
  WHERE transactions_id IS NULL
  OR
  sale_date IS NULL
@@ -91,8 +91,8 @@ select * from retail_sales where sale_date = '2022-11-05';
 ***
 2.***Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022**:
 ***sql
- select transactions_id,quantiy from retail_sales where category = 'Clothing' and quantiy >=4 and MONTH (sale_date)=11
- ***
+select transactions_id,quantiy from retail_sales where category = 'Clothing' and quantiy >=4 and MONTH (sale_date)=11
+***
 3.**Write a SQL query to calculate the total sales (total_sale) for each category**:
 ***sql
 select SUM(total_sale) AS sale_per_category,category from retail_sales
@@ -140,9 +140,9 @@ group by category;
 with hourly_sale as 
 (select *,
 case when hour(sale_time)<12 then 'Morning'
-       when hour(sale_time) between 12 AND 17 then 'Afernoon'
-	ELSE 'Evening'
-    end as shift
+when hour(sale_time) between 12 AND 17 then 'Afernoon'
+ELSE 'Evening'
+end as shift
 from retail_sales)
 select shift,count(*) as totalorders from hourly_sale
 group by shift;
