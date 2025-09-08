@@ -8,8 +8,11 @@ In this project I have used SQL skills and techniques to explore, clean, and ana
 **Objectives**
 
 1.**Set up a retail sales database**: Created retail sales database and imported sales data.
+
 2.**Data Cleaning**: Identified if any records are ther with missing or null values and delted the null values.
+
 3.**Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
+
 4.**Business Analysis**: Used SQL to answer specific business questions and derive insights from the sales data.
 
 **Project Structure**
@@ -17,6 +20,7 @@ In this project I have used SQL skills and techniques to explore, clean, and ana
 **1.Database Setup**
 
 **Database Creation**: The project starts by creating a database named projects.
+
 **Table Creation**: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount
 
 ***sql
@@ -36,6 +40,7 @@ CREATE TABLE Retail_sales
 ***
 
 **2.Data Exploration & Cleaning**
+
 **Record Count**: Determined the total number of records in the dataset.
 **Customer Count**: Found out how many unique customers are in the dataset.
 **Category Count**: Identified all unique product categories in the dataset.
