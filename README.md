@@ -1,1 +1,1 @@
-# SQL--Retail-Sales-Analysis-Project
+# SQL-Retail-Sales-Analysis-Project
